@@ -1,5 +1,6 @@
 import os
 import random
+import json
 def get_words_from_file(file_path):
     with open(file_path, 'r') as file:
         words = file.read().split()
@@ -24,6 +25,28 @@ def __main__():
         print("Random Sentence:\n", random_sentence)
     else:
         print("The number of words must be a numeric value between 2 and 20.")
+    
+    ##Exercise 2
+
+    sampleJson = """{ 
+    "company":{ 
+        "employee":{ 
+            "name":"emma",
+            "payable":{ 
+                "salary":7000,
+                "bonus":800
+            }
+        }
+    }
+    }"""
+    data = json.loads(sampleJson)
+    print("Salary:", data["company"]["employee"]["payable"]["salary"])
+    data["company"]["employee"]["birth_date"] = "1992-07-15"
+
+    with open("sample.json", 'w') as file_obj:
+        json.dump(data, file_obj, indent=4)
+
+    print(data)
 
 if __name__ == "__main__":
     __main__()
