@@ -1,0 +1,18 @@
+{
+  "name": "mcp-day1-build-a-server-js",
+  "private": true,
+  "type": "module",
+  "description": "JavaScript twins of the Day 1 Python files (MCP TS SDK + Ollama + pg).",
+  "scripts": {
+    "hook": "node demo_act1_failures_simple.js",
+    "prove": "node prove_it_runs.js",
+    "inspect": "npx @modelcontextprotocol/inspector@latest -- node day1_server_full.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "zod": "^4.4.3",
+    "ollama": "^0.6.3",
+    "pg": "^8.23.0"
+  },
+  "comment": "Run `npm install` once. Servers use STDIO — launch via the Inspector or Goose, e.g. `node day1_server_full.js`. demo files need Ollama running; day1_server_neon.js needs NEON_DATABASE_URL."
+}
