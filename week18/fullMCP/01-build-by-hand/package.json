@@ -1,0 +1,16 @@
+{
+  "name": "mcp-day3-01-build-by-hand",
+  "private": true,
+  "type": "module",
+  "description": "Build the MCP agent loop by hand (JavaScript track). Self-contained: run npm install in THIS folder.",
+  "scripts": {
+    "agent": "node agent_UNFINISHED.js",
+    "finished": "node agent_FINISHED.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "openai": "^7.4.0",
+    "dotenv": "^17.2.3"
+  },
+  "comment": "This folder stands alone. Open a terminal HERE, run `npm install` once, then `npm run agent`. The Day 1 server lives at ../../Day1-Build-a-Server/day1_server_full.py."
+}
